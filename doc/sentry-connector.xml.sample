@@ -1,0 +1,6 @@
+<!-- BEGIN_INCLUDE(sentry:send-exception) -->
+	<sentry:send-exception>
+		<sentry:exception exception="#[payload]" />
+		<sentry:exception extraInfoMap= extraInfoMap />
+	</sentry:send-exception>
+<!-- END_INCLUDE(sentry:send-exception) -->
