@@ -41,19 +41,17 @@ import io.sentry.SentryClient;
 @Connector(name = "sentry", friendlyName = "Sentry Connector")
 public class SentryConnector {
 
-    @Config
-    ConnectionManagementStrategy strategy;
+	@Config
+	ConnectionManagementStrategy strategy;
 
+	public ConnectionManagementStrategy getStrategy() {
+		return strategy;
+	}
 
-    public ConnectionManagementStrategy getStrategy() {
-        return strategy;
-    }
+	public void setStrategy(ConnectionManagementStrategy strategy) {
+		this.strategy = strategy;
+	}
 
-    public void setStrategy(ConnectionManagementStrategy strategy) {
-        this.strategy = strategy;
-    }
-    
-    
 	/**
 	 * Send an exception to Sentry according to the informed DSN.
 	 *
@@ -68,10 +66,9 @@ public class SentryConnector {
 	 */
 	@Processor(friendlyName = "Send exception")
 	public void sendException(Exception exception, @Optional HashMap<String, Object> extraInfoMap) {
-		
 		SentryClient client = strategy.client;
-		
-		if(extraInfoMap != null){
+
+		if (extraInfoMap != null) {
 			for (Entry<String, Object> entry : extraInfoMap.entrySet()) {
 				client.addExtra(entry.getKey(), entry.getValue());
 			}
@@ -79,5 +76,4 @@ public class SentryConnector {
 
 		client.sendException(exception);
 	}
-
 }
