@@ -1,17 +1,14 @@
-# Sentry Release Notes
+# Sentry Connector Release Notes
 # --------------------------------------------------------------------
 # Date: <DD-MMM-YYYY>
-Example: 24-Jan-2015
-# Version: (default value: 0.1)
+# Version: 1.0
 # Supported API versions: 
-Example: Salesforce Bulk API v.28, SOAP API V.28 (include links to API docs)
+Sentry SDK 1.7.5
+
 # Supported Mule Runtime Versions: 
-${project.devkitVersion}
+3.9.0
+
 # New Features and Functionality
-(default value: Initial version) 
-Example: Added support for Query. http://github.com/mulesoft/sentry/issues/61
-# Closed Issues in this release 
-(include issue link when possible)
-Example: Fixed problem with lost telefone on Bulk Update (CLDCONNECT-123).
-# Known Issues in this release
-Example: Session ID expires after  30 days. http://github.com/mulesoft/sentry/issues/62
+
+## Initial version (v1.0) 
+- Created initial version of Sentry Connector. https://github.com/doitsa/sentry-connector/pull/2
