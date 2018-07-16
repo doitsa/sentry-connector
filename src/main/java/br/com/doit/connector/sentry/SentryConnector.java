@@ -31,7 +31,14 @@ import org.mule.api.annotations.param.Optional;
 
 import io.sentry.SentryClient;
 
-@Connector(name="sentry", friendlyName="Sentry Connector")
+/**
+ * Sentry is an open-source error tracking that helps developers monitor and fix
+ * crashes in real time. This connector sends exception data using the Sentry
+ * SDK.
+ * 
+ * @author Luiz Alfredo
+ */
+@Connector(name = "sentry", friendlyName = "Sentry Connector")
 public class SentryConnector {
 
     @Config
@@ -47,8 +54,8 @@ public class SentryConnector {
     }
     
     
-    /**
-	 * Send an exception to Sentry according to the informed dsn.
+	/**
+	 * Send an exception to Sentry according to the informed DSN.
 	 *
 	 * {@sample.xml ../../../doc/sentry-connector.xml.sample
 	 * sentry:send-exception}
@@ -57,7 +64,7 @@ public class SentryConnector {
 	 *            A Java Lang Exception
 	 *
 	 * @param extraInfoMap
-	 *            A map of containing extra info (Optional)
+	 *            A map of extra info (Optional)
 	 */
 	@Processor(friendlyName = "Send exception")
 	public void sendException(Exception exception, @Optional HashMap<String, Object> extraInfoMap) {

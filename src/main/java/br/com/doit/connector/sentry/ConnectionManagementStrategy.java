@@ -53,13 +53,14 @@ public class ConnectionManagementStrategy {
 	}
 
 	/**
-	 * Connect
+	 * Connect to Sentry using the provided DSN.
 	 *
 	 * @param dsn
-	 *            DSN (Data Source Name) of a chosen Sentry project. Use a DNS
+	 *            DSN (Data Source Name) of a chosen Sentry project. Use a DSN
 	 *            that looks like
 	 *            '{PROTOCOL}://{PUBLIC_KEY}@{HOST}/{PATH}{PROJECT_ID}'
 	 * @throws ConnectionException
+	 *             if cannot connect to Sentry using the provided DSN.
 	 */
 	@TestConnectivity
 	@Connect
@@ -72,7 +73,7 @@ public class ConnectionManagementStrategy {
 	}
 
 	/**
-	 * Desconnect client
+	 * Disconnect client
 	 */
 	@Disconnect
 	public void disconnect() {
@@ -80,7 +81,10 @@ public class ConnectionManagementStrategy {
 	}
 
 	/**
-	 * Are we connected?
+	 * Check if this connector is connected to Sentry.
+	 * 
+	 * @return Return {@code true} if it's still connected or {@code false}
+	 *         otherwise.
 	 */
 	@ValidateConnection
 	public boolean isConnected() {
@@ -88,7 +92,9 @@ public class ConnectionManagementStrategy {
 	}
 
 	/**
-	 * Connection identifier
+	 * The connection identifier.
+	 * 
+	 * @return Returns the connection identifier.
 	 */
 	@ConnectionIdentifier
 	public String connectionId() {
