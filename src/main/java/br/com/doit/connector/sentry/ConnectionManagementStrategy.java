@@ -28,11 +28,9 @@ import org.mule.api.annotations.Disconnect;
 import org.mule.api.annotations.TestConnectivity;
 import org.mule.api.annotations.ValidateConnection;
 import org.mule.api.annotations.components.ConnectionManagement;
-import org.mule.api.annotations.display.FriendlyName;
 import org.mule.api.annotations.param.ConnectionKey;
 
 import io.sentry.DefaultSentryClientFactory;
-import io.sentry.Sentry;
 import io.sentry.SentryClient;
 import io.sentry.SentryClientFactory;
 import io.sentry.dsn.InvalidDsnException;
