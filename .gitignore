@@ -2,3 +2,4 @@ target/
 build/
 .project
 .classpath
+/bin/
