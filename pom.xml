@@ -16,6 +16,7 @@
 	<name>Mule Sentry Anypoint Connector</name>
 
 	<properties>
+		<jdk.version>1.8</jdk.version>
 		<category>Community</category>
 		<licensePath>LICENSE.md</licensePath>
 		<devkit.studio.package.skip>false</devkit.studio.package.skip>
