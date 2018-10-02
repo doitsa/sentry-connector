@@ -85,4 +85,10 @@
 		</snapshotRepository>
 	</distributionManagement>
 
+	<scm>
+		<connection>scm:git:ssh://git@github.com/doitsa/sentry-connector.git</connection>
+		<url>scm:git:ssh://git@github.com/doitsa/sentry-connector.git</url>
+		<developerConnection>scm:git:ssh://git@github.com/doitsa/sentry-connector.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 </project>
