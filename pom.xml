@@ -100,13 +100,13 @@
 		<repository>
 			<id>doit.releases</id>
 			<name>DOit Releases Repository</name>
-			<url>http://repository.doit.com.br/content/repositories/releases</url>
+			<url>https://repository.doit.com.br/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>doit.snapshots</id>
 			<uniqueVersion>false</uniqueVersion>
 			<name>DOit Snapshots Repository</name>
-			<url>http://repository.doit.com.br/content/repositories/snapshots</url>
+			<url>https://repository.doit.com.br/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
